@@ -35,6 +35,16 @@ a {
   color: $primary-color-text;
 }
 
+.nav a {
+  color: $primary-color-light;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -57,16 +67,6 @@ a {
       }
     }
   }
-}
-
-.nav a {
-  color: $primary-color-light;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-.nav a:hover {
-  color: #fff;
 }
 
 .main {
@@ -100,76 +100,8 @@ a {
   color: red;
 }
 
-form {
-  width: 80%;
-  margin: 8px 0;
-
-  .field {
-    width: 100%;
-    padding: 8px 0px;
-    label {
-      margin-bottom: 8px;
-    }
-
-    input {
-      width: 100%;
-      border: 1px solid $divider-color;
-      border-radius: 4px;
-      padding: 8px;
-      background-color: $primary-color-light;
-    }
-
-    input[type="checkbox"] {
-      width: fit-content;
-    }
-  }
-
-  .actions {
-    display: flex;
-    justify-content: center;
-    margin: 8px 0;
-  }
-  input[type="submit"] {
-    padding: 8px;
-    width: 50%;
-    border: none;
-    border-radius: 4px;
-    background-color: $primary-color-dark;
-    color: $primary-color-light;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
-
-  input[type="submit"]:hover {
-    background-color: $primary-color;
-    color: #fff;
-  }
-
-  .actions.reset {
-    input[type="submit"] {
-      width: 100%;
-    }
-  }
-
-  #error_explanation {
-    h2 {
-      color: $primary-color-text;
-      font-size: 1em;
-    }
-    ul {
-      color: #f00;
-    }
-  }
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 16px;
-  text-transform: capitalize;
-}
-
 .new_post,
-.new_comment{
+.new_comment {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,6 +136,77 @@ form {
     width: 30%;
     margin-left: 70%;
   }
+}
+
+form {
+  width: 80%;
+  margin: 8px 0;
+
+  .field {
+    width: 100%;
+    padding: 8px 0;
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid $divider-color;
+      border-radius: 4px;
+      padding: 8px;
+      background-color: $primary-color-light;
+    }
+
+    input[type="checkbox"] {
+      width: fit-content;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+  }
+
+  input[type="submit"] {
+    padding: 8px;
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  input[type="submit"]:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  .actions.reset {
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  #error_explanation {
+    h2 {
+      color: $primary-color-text;
+      font-size: 1em;
+    }
+
+    ul {
+      color: #f00;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 16px;
+  text-transform: capitalize;
 }
 
 .timeline {
@@ -241,12 +244,13 @@ form {
   .post-liking {
     float: right;
 
-    a{
+    a {
       color: $primary-color-dark;
       font-weight: bold;
       font-size: 0.9em;
       margin: 0 4px;
     }
+
     .post-date {
       font-size: 0.6em;
     }
@@ -271,9 +275,10 @@ form {
       padding: 10px;
 
       p {
-        font-size: .8em;
+        font-size: 0.8em;
         width: 90%;
       }
+
       span {
         position: absolute;
         right: 3px;
@@ -310,9 +315,11 @@ form {
 
   .timeline {
     width: 100%;
+
     h3 {
       width: 100%;
     }
+
     justify-content: start;
   }
 }
