@@ -8,8 +8,17 @@ class FriendshipsController < ApplicationController
         end
       end
 
+      def update
+        @friendship = Friendship.find(params[:id])
+        @friendship.update(friendship_params)
+        
+        flash.notice = "Friendship created"
+
+        redirect_to users_path
+     end
+
       private
       def friendship_params
-        params.permit(:invitor_id, :invitee_id, :status)
+        params.permit(:invitor_id, :invitee_id, :status, :id)
       end
 end

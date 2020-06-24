@@ -4,7 +4,7 @@ module UserHelper
         html = ''
         
         if Friendship.occurence_in_friendship(id,current_user.id).count > 0
-            html += link_to('Accept friendship', users_path)
+            html += link_to('Accept Friendship', friendship_path(:invitee_id => current_user.id, :invitor_id => id, :status => true, :id => 1), :method => :patch)
             html += link_to('Reject friendship', users_path)
         elsif Friendship.occurence_in_friendship2(id,current_user.id).count == 1
             html += 'Already Friends'
