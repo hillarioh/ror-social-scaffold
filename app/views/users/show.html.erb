@@ -1,9 +1,28 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+    <% if Friendship.occurence_in_friendship(current_user.id,@user.id).count == 0 %>
+        
+        <span> 
+          <button><%= link_to 'Invite to frendship', users_path %></button>
+        </span>
+        <% end %>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
       <%= render @posts %>
     </ul>
+  </article>
+  <article>
+  <h3>Pending Invitations</h3>
+    <ul class="users-list">
+  <% User.includes(:invitors).where(friendships: {invitee_id: current_user.id}).references(:friendships).each do |cur| %>
+      <li>
+        <span>Name: <%= cur.name %></span>
+         <span> 
+          <button><%= link_to 'Accept', users_path %></button>
+        </span>
+      </li>
+  <% end %>
+  </ul>
   </article>
 </section>
