@@ -11,13 +11,14 @@ RSpec.describe Friendship, type: :model do
       expect(Friendship.new(invitor: nil)).to_not be_valid
     end
 
-    it 'is not valid without an invitor id' do
+    it 'is not valid without an invitee id' do
        expect(Friendship.new(invitee: nil)).to_not be_valid
     end
 
-    it 'is  valid without a status of friendship' do
+    it 'is valid without a status of friendship' do
         expect(friend.status).to eq false
     end
   end
+  
 
 end
