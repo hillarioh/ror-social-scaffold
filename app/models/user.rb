@@ -12,4 +12,6 @@ class User < ApplicationRecord
   
   has_many :invitors, foreign_key: 'invitor_id', class_name: 'Friendship'
   has_many :invitees, foreign_key: 'invitee_id', class_name: 'Friendship'
+
+
 end
