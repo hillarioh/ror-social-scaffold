@@ -1,11 +1,12 @@
 class FriendshipsController < ApplicationController
     def create
-        @friendship = Friendship.new(invitor_id: current_user.id, invitee_id: user.id)
-    
-        if @friendship.save
-          redirect_to users_path, notice: 'You invited to be a friend.'
-        else
-          redirect_to users_path, alert: 'You cannot invite the user.'
-        end
+        @friendship = Friendship.new(friendship_params)    
+        @friendship.save   
+        redirect_to users_path
+      end
+
+      private
+      def friendship_params
+        params.permit(:invitor_id, :invitee_id, :status)
       end
 end

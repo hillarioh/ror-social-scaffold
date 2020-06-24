@@ -11,7 +11,7 @@ module UserHelper
         elsif Friendship.occurence_in_friendship(current_user.id,id).count > 0
             html += 'Awaiting acceptance from user'
         else
-            html += link_to('Invite', friendships_path, method: :post)
+            html += link_to('Invite', friendships_path(:invitor_id => current_user.id, :invitee_id => id), :method => :post)
         end
         html.html_safe
     end
