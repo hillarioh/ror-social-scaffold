@@ -6,6 +6,15 @@
         <span class="profile-link">
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>
+        <span>
+       <% if Friendship.occurence_in_friendship(current_user.id,user.id).count == 0 %>
+        
+        <span>
+ 
+          <button><%= link_to 'Invite to frendship', users_path %></button>
+        </span>
+        <% end %>
+
       </li>
     <% end %>
   </ul>
