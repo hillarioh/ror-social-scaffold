@@ -1,11 +1,6 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
-    <% if Friendship.occurence_in_friendship(current_user.id,@user.id).count == 0 %>
-        
-        <span> 
-          <button><%= link_to 'Invite to frendship', users_path %></button>
-        </span>
-        <% end %>
+    <span><button><%= check_occurence(@user.id) %></button></span>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
@@ -19,7 +14,7 @@
       <li>
         <span>Name: <%= cur.name %></span>
          <span> 
-          <button><%= link_to 'Accept', users_path %></button>
+          <button><%= link_to 'Accept friendship', users_path %></button>
         </span>
       </li>
   <% end %>
