@@ -5,5 +5,5 @@ class Friendship < ApplicationRecord
     validates_presence_of :invitor
     validates_presence_of :invitee
 
-    scope :occurence_in_friendship, ->(r,e){where(invitor: r,invitee: e).count} 
+    scope :occurence_in_friendship, ->(r,e){where(invitor: r,invitee: e)} 
 end
