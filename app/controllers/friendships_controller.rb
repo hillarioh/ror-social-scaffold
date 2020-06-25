@@ -6,9 +6,9 @@ class FriendshipsController < ApplicationController
         else
           redirect_to users_path, alert: 'You cannot invite him.'
         end
-      end
+    end
 
-      def update
+    def update
         @friendship = Friendship.find(params[:id])
         if @friendship.update(friendship_params)
           flash.notice = "Friendship created"
@@ -16,7 +16,14 @@ class FriendshipsController < ApplicationController
         else
           flash.alert = 'Unable'
         end
-     end
+    end
+
+    def destroy
+      @friendship = Friendship.find(params[:id])
+      @friendship.destroy
+  
+      redirect_to users_path
+    end
 
       private
       def friendship_params
