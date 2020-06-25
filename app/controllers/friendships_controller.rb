@@ -10,15 +10,16 @@ class FriendshipsController < ApplicationController
 
       def update
         @friendship = Friendship.find(params[:id])
-        @friendship.update(friendship_params)
-        
-        flash.notice = "Friendship created"
-
-        redirect_to users_path
+        if @friendship.update(friendship_params)
+          flash.notice = "Friendship created"
+          redirect_to users_path
+        else
+          flash.alert = 'Unable'
+        end
      end
 
       private
       def friendship_params
-        params.permit(:invitor_id, :invitee_id, :status, :id)
+        params.permit(:id,:invitor_id, :invitee_id, :status )
       end
 end
