@@ -10,7 +10,7 @@
   <article>
   <h3>Pending Invitations</h3>
     <ul class="users-list">
-  <% User.includes(:invitors).where(friendships: {invitee_id: current_user.id}).references(:friendships).each do |cur| %>
+  <% User.includes(:friendships).where(friendships: {friend_id: current_user.id}).references(:friendships).each do |cur| %>
       <li>
         <span>Name: <%= cur.name %></span>
          <span> 
