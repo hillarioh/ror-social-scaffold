@@ -19,6 +19,4 @@ RSpec.describe Friendship, type: :model do
         expect(friend.status).to eq false
     end
   end
-  
-
 end

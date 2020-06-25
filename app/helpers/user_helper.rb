@@ -6,6 +6,7 @@ module UserHelper
         if Friendship.occurence_in_friendship(id,current_user.id).count > 0
             friend = Friendship.occurence_in_friendship(id,current_user.id).pluck(:id)
             html += link_to('Accept Friendship', friendship_path(:id => friend[0], :invitor_id => current_user.id, :invitee_id => id,:status =>true), method: :put)
+            html += ' '            
             html += link_to('Reject friendship', friendship_path(:id => friend[0], :invitor_id => current_user.id, :invitee_id => id,:status =>true), method: :delete)
         elsif Friendship.occurence_in_friendship2(id,current_user.id).count == 1
             html += 'Already Friends'
