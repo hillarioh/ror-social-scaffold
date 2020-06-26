@@ -20,7 +20,6 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
-
     ids = Friendship.posting_friend(current_user.id).pluck(:user_id)
     ids += Friendship.posting_user(current_user.id).pluck(:friend_id)
     ids += [current_user.id]
