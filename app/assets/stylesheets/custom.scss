@@ -20,6 +20,40 @@ body {
   font-weight: 400;
 }
 
+#accept {
+  padding: 2px 4px;
+  background: $primary-color;
+  color: white;
+  border-radius: 5px;
+  margin-right: 5px;
+
+  &:hover {
+    background: $primary-color-dark;
+  }
+}
+
+#invite {
+  padding: 2px 4px;
+  background: grey;
+  color: white;
+  border-radius: 5px;
+
+  &:hover {
+    background: $primary-color-text;
+  }
+}
+
+#reject {
+  padding: 2px 4px;
+  background: rgb(212, 99, 99);
+  color: white;
+  border-radius: 5px;
+
+  &:hover {
+    background: rgb(177, 57, 57);
+  }
+}
+
 h1,
 h2,
 h3 {

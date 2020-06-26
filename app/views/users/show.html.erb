@@ -1,9 +1,23 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+    <span><%= check_occurence(@user.id) %></span>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
       <%= render @posts %>
     </ul>
+  </article>
+  <article>
+  <h3>Pending Invitations</h3>
+    <ul class="users-list">
+  <% User.includes(:friendships).where(friendships: {friend_id: current_user.id}).references(:friendships).each do |cur| %>
+      <li>
+        <span>Name: <%= cur.name %></span>
+         <span> 
+          <%= check_occurence(cur.id) %>
+        </span>
+      </li>
+  <% end %>
+  </ul>
   </article>
 </section>
