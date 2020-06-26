@@ -14,7 +14,7 @@
       <li>
         <span>Name: <%= cur.name %></span>
          <span> 
-          <button><%= link_to 'Accept friendship', users_path %></button>
+          <%= check_occurence(cur.id) %>
         </span>
       </li>
   <% end %>
