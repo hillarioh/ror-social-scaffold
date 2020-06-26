@@ -20,17 +20,17 @@ RSpec.describe 'Users controller', type: :feature do
   end
   it 'rejects a friend request' do
     visit '/users'
-    click_button 'reject'
+    click_link 'reject'
     expect(page).to have_content ''
   end
   it 'accepts a friend request' do
     visit '/users'
-    click_button 'accept'
+    click_link 'accept'
     expect(page).to have_content ''
   end
   it 'sends a friend invite' do
     visit '/users'
-    click_button 'invite'
+    click_link 'invite'
     expect(page).to have_content 'Awaiting acceptance from user'
   end
 end
