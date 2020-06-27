@@ -75,10 +75,6 @@ Open `http://localhost:3000/` in your browser.
 - Twitter: [@hillaokri](https://twitter.com/hillaokri)
 - Linkedin: [@HillaryOkerio](https://www.linkedin.com/in/hillaryokerio/)
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
@@ -89,9 +85,6 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-## Show your support
-
-Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
