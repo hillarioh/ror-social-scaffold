@@ -1,15 +1,20 @@
-# Scaffold for social media app with Ruby on Rails
+# Simple social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This is a microverse ruby on rails project that includes coming up with a simple working social media web app. The app includes user signing up, login, sending friend request , accepting or rejecting and posting content.
+
+## Screenshot
+
+![screenshot](app/assets/images/intro.png)
 
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Devise
 
 ## Live Demo
 
-TBA
+[Live link](https://agile-lowlands-64878.herokuapp.com/users/sign_in)
 
 
 ## Getting Started
@@ -57,13 +62,26 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-### Deployment
 
-TBA
+## Author 1
 
-## Authors
+- Github: [@NiiazalyDzhumaliev](https://github.com/NiiazalyDzhumaliev)
+- Twitter: [@Niiazaly1](https://twitter.com/Niiazaly1)
+- Linkedin: [Niiazaly Dzhumaliev ](https://www.linkedin.com/in/niiazaly-dzhumaliev-117707132/)
 
-TBA
+## Author 2
+
+- Github: [@hillarioh](https://github.com/hillarioh)
+- Twitter: [@hillaokri](https://twitter.com/hillaokri)
+- Linkedin: [@HillaryOkerio](https://www.linkedin.com/in/hillaryokerio/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
 
 ## 🤝 Contributing
 
@@ -77,9 +95,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+This is a Microverse project done by students, it was initializated by another student and continuated by us.
 
-## 📝 License
-
-TBA
 
